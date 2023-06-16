@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/gradient"
+    tools:context=".ActivityD">
+
+    <ImageView
+        android:id="@+id/shapeImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/placeholder_shape" />
+
+    <LinearLayout
+        android:id="@+id/shapeOptionsLayout"
+        android:layout_width="382dp"
+        android:layout_height="95dp"
+        android:layout_below="@id/shapeImageView"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/gradient">
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:id="@+id/rectangleButton"
+            android:layout_width="107dp"
+            android:layout_height="82dp"
+            android:background="@drawable/button"
+            android:text="Rectangle" />
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:id="@+id/circleButton"
+            android:layout_width="107dp"
+            android:layout_height="82dp"
+            android:background="@drawable/button"
+            android:text="Circle" />
+
+        <Button
+            android:id="@+id/triangleButton"
+            android:layout_width="107dp"
+            android:layout_height="82dp"
+            android:background="@drawable/button"
+            android:text="Triangle" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shapeOptionsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="Score: 0" />
+
+</RelativeLayout>

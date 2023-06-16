@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "200522017928",
+    "project_id": "learnnplay-89e91",
+    "storage_bucket": "learnnplay-89e91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200522017928:android:e1155f48f3b6f264bdc33d",
+        "android_client_info": {
+          "package_name": "com.maid.learnnplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200522017928-qoa2lp7hfav5jqiss3l4r3bf38g1kkdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZDY1ipRw53TpXTpZXrEl0iK36gK3t8lA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200522017928-qoa2lp7hfav5jqiss3l4r3bf38g1kkdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
