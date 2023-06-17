@@ -18,13 +18,10 @@ public class BatteryNetworkReceiver extends BroadcastReceiver {
                 int batteryLevel = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                 int batteryStatus = intent.getIntExtra(BatteryManager.EXTRA_STATUS, -1);
 
-                // Add your desired functionality here for battery changes
                 Toast.makeText(context, "Battery Level: " + batteryLevel + "%", Toast.LENGTH_SHORT).show();
             } else if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
-                // Network connectivity changed
                 boolean noConnectivity = intent.getBooleanExtra(ConnectivityManager.EXTRA_NO_CONNECTIVITY, false);
 
-                // Add your desired functionality here for network changes
                 if (noConnectivity) {
                     Toast.makeText(context, "Network Disconnected", Toast.LENGTH_SHORT).show();
                 } else {

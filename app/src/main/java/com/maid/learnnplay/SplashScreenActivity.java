@@ -17,10 +17,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        // Show the splash screen for a certain duration
-        // You can add any desired logic or animations here
-
-        // After showing the splash screen, check if the user has agreed to the curriculum
         if (hasAgreedToCurriculum()) {
             startMainActivity();
         } else {

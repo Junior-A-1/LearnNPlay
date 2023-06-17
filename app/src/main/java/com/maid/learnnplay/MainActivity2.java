@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    RecyclerView recyclerView,recyclerView1,recyclerView2;
+    RecyclerView recyclerView;
     ArrayList<ListItem> lists;
 
     @Override

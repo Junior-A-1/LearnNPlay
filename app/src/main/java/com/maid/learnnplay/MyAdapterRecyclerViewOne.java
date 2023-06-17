@@ -35,14 +35,13 @@ public class MyAdapterRecyclerViewOne extends RecyclerView.Adapter<MyAdapterRecy
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ListItem listItem = list.get(holder.getAdapterPosition());
 
-        // Use the `holder.getAdapterPosition()` instead of `position` from the method parameters
-
         holder.imageView.setImageResource(listItem.imageView);
         holder.textView.setText(listItem.textView);
 
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 navigateToActivity(holder.getAdapterPosition());
             }
         });
@@ -60,7 +59,8 @@ public class MyAdapterRecyclerViewOne extends RecyclerView.Adapter<MyAdapterRecy
         TextView textView;
         Button button;
 
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView)
+        {
             super(itemView);
             this.imageView = itemView.findViewById(R.id.imgview_1);
             this.textView = itemView.findViewById(R.id.txtview_1);
@@ -68,8 +68,10 @@ public class MyAdapterRecyclerViewOne extends RecyclerView.Adapter<MyAdapterRecy
         }
     }
 
-    private void navigateToActivity(int position) {
-        switch (position) {
+    private void navigateToActivity(int position)
+    {
+        switch (position)
+        {
             case 0:
                 Intent intentA = new Intent(context, ActivityA.class);
                 context.startActivity(intentA);
@@ -86,7 +88,6 @@ public class MyAdapterRecyclerViewOne extends RecyclerView.Adapter<MyAdapterRecy
                 Intent intentD = new Intent(context, ActivityD.class);
                 context.startActivity(intentD);
                 break;
-            // Add more cases for other button positions if needed
         }
     }
 }
