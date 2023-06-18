@@ -6,6 +6,4 @@
     android:background="@drawable/logo"
     tools:context=".SplashScreenActivity">
 
-    <!-- Add any desired splash screen layout, such as logo or text -->
-
 </RelativeLayout>

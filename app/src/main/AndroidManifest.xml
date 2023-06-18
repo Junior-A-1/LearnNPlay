@@ -14,8 +14,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LearnNPlay"
+        android:theme="@style/Base.Theme.LearnNPlay"
         tools:targetApi="31">
+        <activity
+            android:name=".RecordActivity"
+            android:exported="false"
+            android:theme="@style/MyApp"/>
+
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
@@ -26,24 +31,23 @@
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
-        </receiver>
-
-        <!-- Receiver 2 -->
+        </receiver> <!-- Receiver 2 -->
         <activity
             android:name=".ActivityD"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/MyApp"/>
         <activity
             android:name=".ActivityC"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityB"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/MyApp"/>
         <activity
             android:name=".ActivityA"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/MyApp"/>
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/MyApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,16 +56,19 @@
         </activity>
         <activity
             android:name=".ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/MyApp"/>
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/MyApp"/>
         <activity
-            android:name=".LetterGameActivity"
-            android:exported="false" />
+            android:name=".ActivityB"
+            android:exported="false"
+            android:theme="@style/MyApp"/>
     </application>
 
 </manifest>

@@ -8,6 +8,16 @@
     tools:context=".ActivityC"
     android:background="@drawable/gradient">
 
+    <ImageButton
+        android:id="@+id/imgbtn1"
+        android:layout_width="48dp"
+        android:layout_height="52dp"
+        android:layout_above="@+id/answerButton1"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="248dp"
+        android:layout_toStartOf="@+id/scoreTextView"
+        android:background="@drawable/button"
+        android:src="@drawable/ic_back" />
     <TextView
         android:id="@+id/questionTextView"
         android:layout_width="128dp"

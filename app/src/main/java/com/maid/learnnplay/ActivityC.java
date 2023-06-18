@@ -2,9 +2,11 @@ package com.maid.learnnplay;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +19,7 @@ public class ActivityC extends AppCompatActivity {
     private int[] answers;
     private int correctAnswer;
     private int score;
+    ImageButton imgbtn;
 
     private TextView scoreTextView;
 
@@ -33,6 +36,17 @@ public class ActivityC extends AppCompatActivity {
         answerButtons[3] = findViewById(R.id.answerButton4);
 
         scoreTextView = findViewById(R.id.scoreTextView);
+        imgbtn = findViewById(R.id.imgbtn1);
+
+
+        imgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityC.this,MainActivity2.class);
+                intent.putExtra("ScoreC",score);
+                startActivity(intent);
+            }
+        });
 
         generateQuestion();
         for (Button button : answerButtons) {

@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                             FirebaseDatabase
                                     .getInstance()
                                     .getReference("user/" + FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(new User(EDT_USERNAME.getText().toString(), EDT_EMAIL.getText().toString(), ""));
+                                    .setValue(new User(EDT_USERNAME.getText().toString(), EDT_EMAIL.getText().toString(), "",0,0,0));
                             startActivity(new Intent(MainActivity.this, MainActivity2.class));
                             Toast.makeText(MainActivity.this, "Signed Up Successfully", Toast.LENGTH_SHORT).show();
                         } else {

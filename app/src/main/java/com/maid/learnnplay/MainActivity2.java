@@ -9,6 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -16,6 +21,9 @@ public class MainActivity2 extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ArrayList<ListItem> lists;
+    TextView textView;
+    ImageButton imageButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +31,14 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         recyclerView = findViewById(R.id.recycler_view);
+        imageButton = findViewById(R.id.imgView1);
 
         lists = new ArrayList<>();
 
         lists.add(new ListItem(R.drawable.game1,"Piano Alphabet"));
         lists.add(new ListItem(R.drawable.game2,"Correct Me"));
-        lists.add(new ListItem(R.drawable.game3,"PLAY"));
-        lists.add(new ListItem(R.drawable.game,"SHAPE ME"));
+        lists.add(new ListItem(R.drawable.game3,"Multy Me"));
+        lists.add(new ListItem(R.drawable.game,"Shape ME"));
 
 
         MyAdapterRecyclerViewOne adapter = new MyAdapterRecyclerViewOne(this,lists);
@@ -38,6 +47,22 @@ public class MainActivity2 extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
 
+
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int ScoreD = getIntent().getIntExtra("ScoreD",0);
+                int ScoreC = getIntent().getIntExtra("ScoreC",0);
+                int ScoreB = getIntent().getIntExtra("ScoreB",0);
+
+
+                Intent intent = new Intent(MainActivity2.this,RecordActivity.class);
+                intent.putExtra("DScore",ScoreD);
+                intent.putExtra("CScore",ScoreC);
+                intent.putExtra("BScore",ScoreB);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -57,4 +82,8 @@ public class MainActivity2 extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
+
 }
